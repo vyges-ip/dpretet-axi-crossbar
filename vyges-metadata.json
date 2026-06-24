@@ -3,9 +3,9 @@
   "x-version": "1.0.0",
   "name": "dpretet-axi-crossbar",
   "version": "0.1.0",
-  "description": "TODO: one-paragraph description of dpretet-axi-crossbar. Mirror of https://github.com/dpretet/axi-crossbar.",
+  "description": "Configurable SystemVerilog AXI4 / AXI4-Lite crossbar (dpretet): parametric masters/slaves, any addr/data/ID width, round-robin arbitration with priorities, routing tables, optional CDC. No data-width converters (upstream-planned).",
   "license": "MIT",
-  "maturity": "draft",
+  "maturity": "beta",
   "target": [
     "asic",
     "fpga"
@@ -66,12 +66,16 @@
   ],
   "categories": [
     {
-      "main_category": "Miscellaneous",
-      "sub_category": "TODO"
+      "main_category": "Interface Controllers",
+      "sub_category": "AXI4 crossbar"
     }
   ],
   "keywords": [
-    "TODO"
+    "axi4",
+    "axi-lite",
+    "crossbar",
+    "interconnect",
+    "mit"
   ],
   "branding": {
     "provider": "dpretet",
@@ -84,7 +88,7 @@
   "trust": {
     "verification_level": "unverified",
     "tapeout_count": 0,
-    "fpga_validated": false,
+    "fpga_validated": true,
     "maintained": true,
     "last_activity": "2026-06-24T04:56:11Z"
   },
@@ -97,5 +101,6 @@
     "schema": {
       "version": "1.0.0"
     }
-  }
+  },
+  "_note": "Upstream dpretet/axi-crossbar mirror (MIT). Onboarded as an alternative AXI crossbar (kept for later); the data-plane currently uses pulp-platform-axi (which also ships the width converters dpretet lacks). RTL in rtl/."
 }
